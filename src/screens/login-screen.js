@@ -20,7 +20,7 @@ const LoginScreen = () => {
         maxWidth="sm"
         sx={{
           backgroundColor: 'rgb(227, 227, 227)',
-          padding: '60px',
+          padding: '40px',
           boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.2)',
           textAlign: 'center',
         }}
