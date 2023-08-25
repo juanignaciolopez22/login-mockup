@@ -10,12 +10,11 @@ import {
 } from '@mui/material';
 
 const validationSchema = Yup.object().shape({
-  username: Yup.string().required('Username is required'),
-  password: Yup.string().min(8, 'Password must be at least 8 characters').required('Password is required'),
+  username: Yup.string().required('Ingrese un nombre de usuario'),
+  password: Yup.string().min(8, 'La contraseña debe contener al menos 8 caracteres').required('Ingrese una contraseña'),
 });
 
 const LoginForm = ({ onSubmit }) => {
-    
   return (
     <Formik
       initialValues={{ username: '', password: '', rememberMe: false }}
@@ -29,16 +28,16 @@ const LoginForm = ({ onSubmit }) => {
           <Field
             name="username"
             as={TextField}
-            label="Username"
+            label="Usuario"
             variant="outlined"
-            fullWidth
             sx={{
+              width:'90%',
               marginBottom: '16px',
-              backgroundColor: 'rgb(34, 40, 49)', // Dark blue-gray
+              backgroundColor: 'rgb(240, 240, 240)', 
             }}
           />
           {errors.username && (
-            <Typography variant="caption" color="error" sx={{ textAlign: 'left', marginBottom: '8px' }}>
+            <Typography variant="body2" color="error" sx={{ textAlign: 'center', marginBottom: '20px' }}>
               {errors.username}
             </Typography>
           )}
@@ -49,15 +48,14 @@ const LoginForm = ({ onSubmit }) => {
             label="Contraseña"
             variant="outlined"
             type="password"
-            fullWidth
             sx={{
+              width:'90%',
               marginBottom: '16px',
-              backgroundColor: 'rgb(34, 40, 49)', // Dark blue-gray
-              
+              backgroundColor: 'rgb(240, 240, 240)', 
             }}
           />
           {errors.password && (
-            <Typography variant="caption" color="error" sx={{ textAlign: 'left', marginBottom: '8px'}}>
+            <Typography variant="body2" color="error" sx={{ textAlign: 'center', marginBottom: '20px' }}>
               {errors.password}
             </Typography>
           )}
@@ -69,7 +67,7 @@ const LoginForm = ({ onSubmit }) => {
             {({ field }) => (
               <FormControlLabel
                 control={<Checkbox {...field} />}
-                label={<Typography sx={{ color: 'rgb(238, 238, 238)' }}>Recordar nombre de usuario</Typography>}
+                label={<Typography sx={{ color: 'rgb(72, 84, 91)' }}>Recordar nombre de usuario</Typography>}
                 sx={{ marginBottom: '16px', alignItems: 'center', justifyContent: 'center', display: 'flex' }}
               />
             )}
@@ -80,10 +78,10 @@ const LoginForm = ({ onSubmit }) => {
             variant="contained"
             sx={{
               marginBottom: '8px',
-              width: '70%',
-              backgroundColor: 'rgb(255, 211, 105)', // Light gold
+              width: '50%',
+              backgroundColor: 'rgb(105, 132, 150)', 
               '&:hover': {
-                backgroundColor: 'rgb(255, 211, 89)', // Light gray
+                backgroundColor: 'rgb(125, 152, 170)', 
               },
             }}
             onClick={() => {

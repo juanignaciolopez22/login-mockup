@@ -10,24 +10,22 @@ const LoginScreen = () => {
   return (
     <Box
       sx={{
-        backgroundColor: 'rgb(34, 40, 49)', // Dark blue-gray
+        backgroundColor: 'rgb(250, 248, 255)',
         minHeight: '100vh',
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center',
       }}
     >
       <Container
         maxWidth="sm"
         sx={{
-          backgroundColor: 'rgb(57, 62, 70)', // Dark blue-gray
-          padding: '50px',
-          borderRadius: '20px',
-          boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.1)',
+          backgroundColor: 'rgb(227, 227, 227)',
+          padding: '60px',
+          boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.2)',
           textAlign: 'center',
         }}
       >
-        <Typography variant="h4" gutterBottom sx={{ color: 'rgb(255, 211, 105)' }}>
+        <Typography variant="h4" gutterBottom sx={{ color: 'rgb(105, 132, 150)' }}>
           Login MockUp
         </Typography>
         <LoginForm onSubmit={handleLogin} />
